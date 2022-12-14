@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+      *{
+        font-family: "Arial";
+      }
+      label{
+        font-size: 20px;
+      }
+      #step-title{
+        margin-left: 85px;
+      }
+      button{
+        width: 100px;
+        height: 25px;
+        margin-top: 5px;
+        margin-left: 85px;
+        border: 1px solid black;
+        border-radius: 4px;
+        background-color: #24BF6D;
+        box-shadow: 0 7px #999;
+        font-size: 16px;
+        color: #FFFFFF;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #24BF6D;
+        box-shadow: 0 7px #666;
+      }
+      button:active{
+        background-color: #24BF6D;
+        box-shadow: 0 5px #444;
+        transform: translateY(1px);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="tutorial">
+      <label id="step-title">How to use:</label>
+      <br>
+      <label id="step-one">1. Click on the button and select your sheet file with the tags</label>
+      <br>
+      <br>
+      <label id="step-two">2. Wait for the confirmation message to appear on your screen</label>
+    </div>
+    <br>
+    <button id="picker-button">Select file</button>
+
+    <script>
+      document.getElementById("picker-button").addEventListener("click", function(){
+        google.script.run.showPicker();
+      });
+    </script>
+
+  </body>
+</html>
